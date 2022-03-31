@@ -1,0 +1,12 @@
+[Unit]
+Description=TTMediaBot
+Requires=pulseaudio.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/TTMediaBot
+ExecStart=/home/TTMediaBot/TTMediaBot.sh -c /home/TTMediaBot/config.json
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
